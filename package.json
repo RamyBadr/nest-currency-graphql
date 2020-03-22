@@ -1,7 +1,7 @@
 {
   "name": "nest-currency-graphql",
   "version": "0.0.1",
-  "description": "Graphql Api calling ",
+  "description": "Graphql Api calling currency conversion api",
   "author": "Ramy Badr",
   "license": "MIT",
   "scripts": {
