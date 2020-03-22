@@ -4,14 +4,16 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CatsModule } from './cats/cats.module';
+import { CurrencyModule } from './currency/currency.module';
 
 @Module({
   imports: [
-    CatsModule,
+    // CatsModule,
+    CurrencyModule,
     GraphQLModule.forRoot({
       autoSchemaFile: 'schema.gql',
     }),
-    MongooseModule.forRoot('mongodb://localhost/nest'),
+    // MongooseModule.forRoot('mongodb://localhost/nest'),
   ],
   controllers: [AppController],
   providers: [AppService],

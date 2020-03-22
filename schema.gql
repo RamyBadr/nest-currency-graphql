@@ -3,24 +3,31 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
-input CatInput {
-  name: String!
-  age: Int!
-  breed: String!
+type CurrencyRate {
+  currency: String
+  rate: Float
 }
 
-type CatType {
-  id: ID!
-  name: String!
-  age: Int!
-  breed: String!
+type CurrencyRateResponse {
+  success: Boolean!
+  timestamp: Int
+  base: String
+  date: String
+  error: CurrencyRateResponseError
+  currencyRates: [CurrencyRate!]
 }
 
-type Mutation {
-  createCat(input: CatInput!): CatType!
+type CurrencyRateResponseError {
+  code: Int
+  type: String
+  info: String
+}
+
+input LatestOptionsArgs {
+  symbols: [String!] = []
+  base: String = "EUR"
 }
 
 type Query {
-  hello: String!
-  cats: [CatType!]!
+  latest(filter: LatestOptionsArgs!): CurrencyRateResponse!
 }

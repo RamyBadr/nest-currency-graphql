@@ -1,5 +1,5 @@
 {
-  "name": "nest-mongo-graphql",
+  "name": "nest-currency-graphql",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -26,6 +26,7 @@
     "@nestjs/mongoose": "^6.0.0",
     "@nestjs/platform-express": "^6.0.0",
     "apollo-server-express": "^2.4.8",
+    "dotenv": "^8.2.0",
     "graphql": "^14.2.1",
     "graphql-tools": "^4.0.4",
     "mongoose": "^5.5.1",
